@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Texts | stiuideo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+      font-family: 'Fira Code', monospace;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .post-list {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .post-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .post-item a {
+      color: #00ffc8;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    .post-item a:hover {
+      text-decoration: underline;
+    }
+
+    #post-content {
+      max-width: 700px;
+      margin: 3rem auto;
+      line-height: 1.6;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Texts</h1>
+  <div class="post-list" id="post-list">
+    <!-- JS injects blog links here -->
+  </div>
+
+  <div id="post-content"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    fetch('posts.json')
+      .then(res => res.json())
+      .then(posts => {
+        const list = document.getElementById('post-list');
+        posts.forEach(post => {
+          const div = document.createElement('div');
+          div.className = 'post-item';
+          div.innerHTML = `<a href="#" data-file="${post.file}">${post.title}</a> <small>(${post.date})</small>`;
+          list.appendChild(div);
+        });
+
+        document.querySelectorAll('.post-item a').forEach(link => {
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const file = link.getAttribute('data-file');
+            fetch('posts/' + file)
+              .then(res => res.text())
+              .then(md => {
+                document.getElementById('post-content').style.display = 'block';
+                document.getElementById('post-content').innerHTML = marked.parse(md);
+              });
+          });
+        });
+      })
+      .catch(err => {
+        document.getElementById('post-list').innerHTML = '<p>Failed to load posts. The world is darkness.</p>';
+        console.error(err);
+      });
+  </script>
+</body>
+</html>
