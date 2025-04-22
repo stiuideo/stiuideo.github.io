@@ -76,13 +76,13 @@
             <img src="${game.image}" alt="${game.title}" />
             <h2>${game.title}</h2>
             <p>${game.description}</p>
-            <a href="${game.link}" target="_blank">Play / View</a>
+            <a href="${game.link}" target="_blank">Play</a>
           `;
           container.appendChild(div);
         });
       })
       .catch(err => {
-        document.getElementById('game-list').innerHTML = '<p>Failed to load games. Something broke, probably your fault.</p>';
+        document.getElementById('game-list').innerHTML = '<p>Failed to load games. Something broke, probably stiuideo fault.</p>';
         console.error(err);
       });
   </script>
