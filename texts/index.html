@@ -44,46 +44,81 @@
       line-height: 1.6;
       display: none;
     }
+
+    .back-link {
+      display: block;
+      margin-top: 2rem;
+      color: #00ffc8;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <h1>Texts</h1>
-  <div class="post-list" id="post-list">
-    <!-- JS injects blog links here -->
-  </div>
-
+  <div class="post-list" id="post-list"></div>
   <div id="post-content"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
-    fetch('posts.json')
-      .then(res => res.json())
-      .then(posts => {
-        const list = document.getElementById('post-list');
-        posts.forEach(post => {
-          const div = document.createElement('div');
-          div.className = 'post-item';
-          div.innerHTML = `<a href="#" data-file="${post.file}">${post.title}</a> <small>(${post.date})</small>`;
-          list.appendChild(div);
-        });
+    const postList = document.getElementById('post-list');
+    const postContent = document.getElementById('post-content');
 
-        document.querySelectorAll('.post-item a').forEach(link => {
-          link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const file = link.getAttribute('data-file');
-            fetch('posts/' + file)
-              .then(res => res.text())
-              .then(md => {
-                document.getElementById('post-content').style.display = 'block';
-                document.getElementById('post-content').innerHTML = marked.parse(md);
-              });
+    function loadList() {
+      postList.style.display = 'block';
+      postContent.style.display = 'none';
+      postContent.innerHTML = '';
+      postList.innerHTML = '';
+
+      fetch('posts.json')
+        .then(res => res.json())
+        .then(posts => {
+          posts.forEach(post => {
+            const div = document.createElement('div');
+            div.className = 'post-item';
+            div.innerHTML = `<a href="#" data-file="${post.file}">${post.title}</a> <small>(${post.date})</small>`;
+            postList.appendChild(div);
           });
+
+          document.querySelectorAll('.post-item a').forEach(link => {
+            link.addEventListener('click', (e) => {
+              e.preventDefault();
+              const file = link.getAttribute('data-file');
+              loadPost(file);
+            });
+          });
+        })
+        .catch(err => {
+          postList.innerHTML = '<p>Failed to load posts. The void is empty and so are you.</p>';
+          console.error(err);
         });
-      })
-      .catch(err => {
-        document.getElementById('post-list').innerHTML = '<p>Failed to load posts. The world is darkness.</p>';
-        console.error(err);
-      });
+    }
+
+    function loadPost(file) {
+      postList.style.display = 'none';
+      fetch('posts/' + file)
+        .then(res => res.text())
+        .then(md => {
+          postContent.innerHTML = marked.parse(md) + '<a href="#" class="back-link">&larr; See other texts</a>';
+          postContent.style.display = 'block';
+
+          document.querySelector('.back-link').addEventListener('click', (e) => {
+            e.preventDefault();
+            loadList();
+          });
+        })
+        .catch(err => {
+          postContent.innerHTML = '<p>Post failed to load. Maybe it never existed. Like your plans.</p>';
+          postContent.style.display = 'block';
+          console.error(err);
+        });
+    }
+
+    loadList();
   </script>
 </body>
 </html>
