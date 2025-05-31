@@ -1,64 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="loading" lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Texts | stiuideo</title>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <link rel="preload" href="/assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/assets/css/style.css"></noscript>
   <style>
-    body {
-      background-color: #1e1e1e;
-      color: #e0e0e0;
-      font-family: 'Fira Code', monospace;
-      margin: 0;
-      padding: 2rem;
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .post-list {
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .post-item {
-      margin-bottom: 1.5rem;
-    }
-
-    .post-item a {
-      color: #00ffc8;
-      text-decoration: none;
-      font-size: 1.2rem;
-    }
-
-    .post-item a:hover {
-      text-decoration: underline;
-    }
-
-    #post-content {
-      max-width: 700px;
-      margin: 3rem auto;
-      line-height: 1.6;
-      display: none;
-    }
-
-    .back-link {
-      display: block;
-      margin-top: 2rem;
-      color: #00ffc8;
-      text-decoration: none;
-      text-align: center;
-    }
-
-    .back-link:hover {
-      text-decoration: underline;
+    html.loading body {
+      visibility: hidden;
     }
   </style>
 </head>
-<body>
+<body class="fade" style="opacity: 0; transition: none;">
   <a href="/" style="position: absolute; top: 1rem; left: 1rem; font-size: 1.5rem; text-decoration: none; color: #00ffc8;">&larr;</a>
   <h1>Texts</h1>
   <div class="post-list" id="post-list"></div>
@@ -120,6 +75,12 @@
     }
 
     loadList();
+  </script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      document.body.classList.add('loaded');
+      document.documentElement.classList.remove('loading');
+    });
   </script>
 </body>
 </html>

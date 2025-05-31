@@ -1,66 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="loading" lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Games | stiuideo</title>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <link rel="preload" href="/assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/assets/css/style.css"></noscript>
   <style>
-    body {
-      background-color: #1e1e1e;
-      color: #e0e0e0;
-      font-family: 'Fira Code', monospace;
-      margin: 0;
-      padding: 2rem;
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .game-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-
-    .game-card {
-      background-color: #2a2a2a;
-      padding: 1rem;
-      border: 1px solid #444;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-
-    .game-card img {
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 1rem;
-    }
-
-    .game-card h2 {
-      margin: 0 0 0.5rem 0;
-    }
-
-    .game-card p {
-      font-size: 0.95rem;
-    }
-
-    .game-card a {
-      display: inline-block;
-      margin-top: 0.75rem;
-      color: #00ffc8;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .game-card a:hover {
-      text-decoration: underline;
+    html.loading body {
+      visibility: hidden;
     }
   </style>
 </head>
-<body>
+<body class="fade" style="opacity: 0; transition: none;">
   <a href="/" style="position: absolute; top: 1rem; left: 1rem; font-size: 1.5rem; text-decoration: none; color: #00ffc8;">&larr;</a>
   <h1>Games</h1>
   <div class="game-list" id="game-list">
@@ -89,5 +42,11 @@
         console.error(err);
       });
   </script>
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    document.body.classList.add('loaded');
+    document.documentElement.classList.remove('loading');
+  });
+</script>
 </body>
 </html>
