@@ -52,7 +52,7 @@
       const imgContainer = document.getElementById('lightbox-images');
       imgContainer.innerHTML = '';
 
-      // simulate loading image list by reading folder (you'll need to list them in JSON later for real)
+      // simulate loading image list by reading folder
       fetch(`albums/${album.folder}/index.json`)
         .then(res => res.json())
         .then(images => {
