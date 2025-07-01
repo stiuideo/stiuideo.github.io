@@ -75,11 +75,17 @@
     }
 
     loadList();
-  </script>
-  <script>
-    window.addEventListener('DOMContentLoaded', function () {
+
+    function fadeIn() {
       document.body.classList.add('loaded');
       document.documentElement.classList.remove('loading');
+    }
+
+    window.addEventListener('DOMContentLoaded', fadeIn);
+    window.addEventListener('pageshow', function(event) {
+      if (event.persisted) {
+        fadeIn();
+      }
     });
   </script>
 </body>
