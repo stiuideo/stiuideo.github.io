@@ -95,9 +95,12 @@ h1 {
 }
 
 .game-card img {
-  max-width: 100%;
+  width: clamp(200px, 100%, 300px);
   height: auto;
   margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .game-card h2 {
@@ -184,7 +187,7 @@ h1 {
 }
 
 .album-title {
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 3vw, 1.1rem);
   font-weight: bold;
 }
 
