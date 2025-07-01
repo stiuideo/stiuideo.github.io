@@ -25,7 +25,14 @@
     <div class="close-btn" onclick="closeLightbox()">&larr; See other albums</div>
   </div>
 
+  <div id="image-viewer">
+    <img id="full-image" src="">
+    <span class="image-viewer-close-btn" onclick="closeImageViewer()">&times;</span>
+  </div>
+
   <script>
+    let currentAlbum = null;
+
     fetch('albums.json')
       .then(res => res.json())
       .then(albums => {
@@ -44,6 +51,7 @@
       });
 
     function openLightbox(album) {
+      currentAlbum = album;
       document.getElementById('lightbox-title').textContent = album.title;
       const desc = document.getElementById('lightbox-description');
       desc.textContent = album.description || '';
@@ -52,13 +60,13 @@
       const imgContainer = document.getElementById('lightbox-images');
       imgContainer.innerHTML = '';
 
-      // simulate loading image list by reading folder
       fetch(`albums/${album.folder}/index.json`)
         .then(res => res.json())
         .then(images => {
           images.forEach(img => {
             const imageEl = document.createElement('img');
             imageEl.src = `albums/${album.folder}/${img}`;
+            imageEl.onclick = () => openImageViewer(imageEl.src);
             imgContainer.appendChild(imageEl);
           });
           document.getElementById('lightbox').style.display = 'flex';
@@ -67,6 +75,16 @@
 
     function closeLightbox() {
       document.getElementById('lightbox').style.display = 'none';
+      currentAlbum = null;
+    }
+
+    function openImageViewer(src) {
+      document.getElementById('full-image').src = src;
+      document.getElementById('image-viewer').style.display = 'flex';
+    }
+
+    function closeImageViewer() {
+      document.getElementById('image-viewer').style.display = 'none';
     }
   </script>
   <script>
