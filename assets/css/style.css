@@ -1,7 +1,3 @@
-/*
-  Todos os estilos principais do site devem ser centralizados aqui.
-*/
-
 /* ===== index.html ===== */
 body {
   margin: 0;
@@ -242,7 +238,7 @@ h1 {
 }
 
 .close-btn {
-  margin-top: 2rem;
+  margin-top: 1rem;
   color: #00ffc8;
   cursor: pointer;
 }
@@ -263,12 +259,19 @@ h1 {
 #full-image {
   max-width: 90%;
   max-height: 90%;
+  display: block;
+  vertical-align: middle;
+}
+
+.image-viewer-content {
+  position: relative;
+  display: inline-block;
 }
 
 .image-viewer-close-btn {
   position: absolute;
-  top: 2rem;
-  right: 2rem;
+  top: -3rem;
+  right: 7rem;
   font-size: 2rem;
   color: #00ffc8;
   cursor: pointer;
