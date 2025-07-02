@@ -209,7 +209,7 @@ h1 {
   font-style: italic;
   margin-bottom: 2rem;
   max-width: 600px;
-  text-align: center;
+  text--align: center;
 }
 
 #lightbox-images {
@@ -286,3 +286,23 @@ body.fade.loaded {
   opacity: 1 !important;
   transition: opacity 0.1s;
 } 
+
+/* ===== illustrations/index.html ===== */
+.masonry-grid {
+  column-count: 3;
+  column-gap: 1em;
+}
+
+.masonry-item {
+  background-color: #2a2a2a;
+  display: inline-block;
+  margin: 0 0 1em;
+  width: 100%;
+  cursor: pointer;
+}
+
+.masonry-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

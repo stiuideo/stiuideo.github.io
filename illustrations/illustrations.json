@@ -1,0 +1,89 @@
+[
+  {
+    "type": "single",
+    "title": "Cashier",
+    "thumbnail": "/assets/images/illustrations/Cashier.png"
+  },
+  {
+    "type": "single",
+    "title": "Cities",
+    "thumbnail": "/assets/images/illustrations/cities.png"
+  },
+  {
+    "type": "single",
+    "title": "Collor Study",
+    "thumbnail": "/assets/images/illustrations/collor-study.png"
+  },
+  {
+    "type": "single",
+    "title": "Cutout",
+    "thumbnail": "/assets/images/illustrations/cutout.png"
+  },
+  {
+    "type": "single",
+    "title": "Daaboyalex Illustrated",
+    "thumbnail": "/assets/images/illustrations/daaboyalex-illustrated.png"
+  },
+  {
+    "type": "single",
+    "title": "Don't Forget Your Coat",
+    "thumbnail": "/assets/images/illustrations/dont-forget-your-coat.png"
+  },
+  {
+    "type": "single",
+    "title": "Future Cities",
+    "thumbnail": "/assets/images/illustrations/future-cities.png"
+  },
+  {
+    "type": "single",
+    "title": "High Limit",
+    "thumbnail": "/assets/images/illustrations/high-limit.png"
+  },
+  {
+    "type": "single",
+    "title": "Minimal Crown",
+    "thumbnail": "/assets/images/illustrations/minimal-crown.png"
+  },
+  {
+    "type": "single",
+    "title": "Monteiro Lobato",
+    "thumbnail": "/assets/images/illustrations/monteiro-lobato.png"
+  },
+  {
+    "type": "single",
+    "title": "Russian Doll",
+    "thumbnail": "/assets/images/illustrations/russian-doll.png"
+  },
+  {
+    "type": "single",
+    "title": "Sad Hammer Boy",
+    "thumbnail": "/assets/images/illustrations/sad-hammer-boy.png"
+  },
+  {
+    "type": "single",
+    "title": "The Talented Ripley",
+    "thumbnail": "/assets/images/illustrations/the-talented-ripley.png"
+  },
+  {
+    "type": "single",
+    "title": "Tired",
+    "thumbnail": "/assets/images/illustrations/tired.png"
+  },
+  {
+    "type": "single",
+    "title": "Tupinamba Child",
+    "thumbnail": "/assets/images/illustrations/tupinamba-child.png"
+  },
+  {
+    "type": "single",
+    "title": "Ze do Caixao",
+    "thumbnail": "/assets/images/illustrations/ze-do-caixao.png"
+  },
+  {
+    "type": "album",
+    "title": "Brazilian RPG",
+    "folder": "Brazilian RPG",
+    "thumbnail": "/illustrations/albums/Brazilian RPG/defensores.png",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  }
+]
