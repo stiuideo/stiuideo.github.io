@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html class="loading" lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Social | stiuideo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <link rel="preload" href="/assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/assets/css/style.css"></noscript>
+  <style>
+    html.loading body {
+      visibility: hidden;
+    }
+  </style>
+</head>
+<body class="fade" style="opacity: 0; transition: none;">
+  <a href="/" style="position: absolute; top: 1rem; left: 1rem; font-size: 1.5rem; text-decoration: none; color: #00ffc8;">&larr;</a>
+  <h1>Social</h1>
+  <div class="social-list" id="social-list">
+    <!-- JS injects content here -->
+  </div>
+
+  <script>
+    fetch('social.json')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('social-list');
+        data.forEach(social => {
+          const card = document.createElement('a');
+          card.className = 'social-card';
+          card.href = social.link;
+          card.target = '_blank';
+          card.innerHTML = `
+            <img src="${social.image}" alt="${social.title}" />
+            <h2>${social.title}</h2>
+            <p>${social.description}</p>
+          `;
+          container.appendChild(card);
+        });
+      })
+      .catch(err => {
+        document.getElementById('social-list').innerHTML = '<p>Failed to load social media links. Please check your connection or contact stiuideo.</p>';
+        console.error(err);
+      });
+  </script>
+<script>
+  function fadeIn() {
+    document.body.classList.add('loaded');
+    document.documentElement.classList.remove('loading');
+  }
+
+  window.addEventListener('DOMContentLoaded', fadeIn);
+  window.addEventListener('pageshow', function(event) {
+    if (event.persisted) {
+      fadeIn();
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+[
+    {
+      "title": "LinkedIn",
+      "description": "Where you can talk to me about work",
+      "link": "https://www.linkedin.com/in/moswaldt/",
+      "image": "/assets/images/social/linkedin.png"
+    },
+    {
+        "title": "Illustration",
+        "description": "Where I share my illustrations.",
+        "link": "https://www.instagram.com/stiuideo.art/",
+        "image": "/assets/images/social/illustration.png"
+    },
+    {
+        "title": "Street Photography",
+        "description": "Where I frame the most interesting part of cities",
+        "link": "https://www.instagram.com/stiuideo.photo/",
+        "image": "/assets/images/social/streetphoto.png"
+    },
+    {
+        "title": "Game Photo",
+        "description": "Where I share how awesome is the game I'm playing.",
+        "link": "https://www.instagram.com/stiuideo.gamephoto/",
+        "image": "/assets/images/social/gamephoto.png"
+    },
+    {
+        "title": "Youtube",
+        "description": "If you call games, photos, drawings or cinema art, I talk about art.",
+        "link": "https://www.youtube.com/@stiuideo.content",
+        "image": "/assets/images/social/youtube.png"
+    }
+]
