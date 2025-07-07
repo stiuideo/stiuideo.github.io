@@ -12,27 +12,16 @@
     html.loading body {
       visibility: hidden;
     }
-    .masonry-grid {
-      column-count: 3;
-      column-gap: 1em;
-    }
-    .masonry-item {
-      background-color: #eee;
-      display: inline-block;
-      margin: 0 0 1em;
-      width: 100%;
-    }
-    .masonry-item img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
   </style>
 </head>
-<body class="fade" style="opacity: 0; transition: none;">
+<body class="fade content-page" style="opacity: 0; transition: none;">
   <a href="/" style="position: absolute; top: 1rem; left: 1rem; font-size: 1.5rem; text-decoration: none; color: #00ffc8;">&larr;</a>
   <h1>Illustrations</h1>
-  <div class="masonry-grid" id="illustration-grid"></div>
+  <div class="masonry-container" id="illustration-grid">
+    <div class="masonry-column"></div>
+    <div class="masonry-column"></div>
+    <div class="masonry-column"></div>
+  </div>
 
   <div class="lightbox" id="lightbox">
     <h2 id="lightbox-title"></h2>
@@ -52,8 +41,8 @@
     fetch('illustrations.json')
       .then(res => res.json())
       .then(items => {
-        const grid = document.getElementById('illustration-grid');
-        items.forEach(item => {
+        const columns = document.querySelectorAll('.masonry-column');
+        items.forEach((item, index) => {
           const div = document.createElement('div');
           div.className = 'masonry-item';
           div.innerHTML = `<img src="${item.thumbnail}" alt="${item.title}">`;
@@ -62,7 +51,7 @@
           } else if (item.type === 'album') {
             div.addEventListener('click', () => openLightbox(item));
           }
-          grid.appendChild(div);
+          columns[index % columns.length].appendChild(div);
         });
       });
 
