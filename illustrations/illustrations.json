@@ -1,6 +1,16 @@
 [
   {
     "type": "single",
+    "title": "Monteiro Lobato",
+    "thumbnail": "/assets/images/illustrations/monteiro-lobato.png"
+  },
+  {
+    "type": "single",
+    "title": "The Talented Ripley",
+    "thumbnail": "/assets/images/illustrations/the-talented-ripley.png"
+  },
+  {
+    "type": "single",
     "title": "Cashier",
     "thumbnail": "/assets/images/illustrations/Cashier.png"
   },
@@ -11,13 +21,13 @@
   },
   {
     "type": "single",
-    "title": "Collor Study",
-    "thumbnail": "/assets/images/illustrations/collor-study.png"
+    "title": "Tired",
+    "thumbnail": "/assets/images/illustrations/tired.png"
   },
   {
     "type": "single",
-    "title": "Cutout",
-    "thumbnail": "/assets/images/illustrations/cutout.png"
+    "title": "Collor Study",
+    "thumbnail": "/assets/images/illustrations/collor-study.png"
   },
   {
     "type": "single",
@@ -46,11 +56,6 @@
   },
   {
     "type": "single",
-    "title": "Monteiro Lobato",
-    "thumbnail": "/assets/images/illustrations/monteiro-lobato.png"
-  },
-  {
-    "type": "single",
     "title": "Russian Doll",
     "thumbnail": "/assets/images/illustrations/russian-doll.png"
   },
@@ -58,16 +63,6 @@
     "type": "single",
     "title": "Sad Hammer Boy",
     "thumbnail": "/assets/images/illustrations/sad-hammer-boy.png"
-  },
-  {
-    "type": "single",
-    "title": "The Talented Ripley",
-    "thumbnail": "/assets/images/illustrations/the-talented-ripley.png"
-  },
-  {
-    "type": "single",
-    "title": "Tired",
-    "thumbnail": "/assets/images/illustrations/tired.png"
   },
   {
     "type": "single",
