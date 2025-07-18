@@ -85,10 +85,44 @@
     function openImageViewer(src) {
       document.getElementById('full-image').src = src;
       document.getElementById('image-viewer').style.display = 'flex';
+      document.body.classList.add('image-viewer-open');
+      const lightboxBackBtn = document.querySelector('.lightbox .back-btn');
+      console.log('Found back button:', lightboxBackBtn);
+      if (lightboxBackBtn) {
+        lightboxBackBtn.remove();
+        console.log('Back button removed from DOM');
+      } else {
+        console.log('No back button found!');
+      }
+      
+      const mainPageBackBtn = document.querySelector('body > .back-btn');
+      if (mainPageBackBtn) {
+        mainPageBackBtn.style.setProperty('display', 'none', 'important');
+        console.log('Main page back button hidden');
+      }
+      console.log('Image viewer opened, body classes:', document.body.className);
     }
 
     function closeImageViewer() {
       document.getElementById('image-viewer').style.display = 'none';
+      document.body.classList.remove('image-viewer-open');
+      const lightbox = document.getElementById('lightbox');
+      if (lightbox && !lightbox.querySelector('.back-btn')) {
+        const backBtn = document.createElement('a');
+        backBtn.href = '#';
+        backBtn.className = 'back-btn';
+        backBtn.onclick = closeLightbox;
+        backBtn.innerHTML = '&larr;';
+        lightbox.insertBefore(backBtn, lightbox.firstChild);
+        console.log('Back button recreated');
+      }
+      
+      const mainPageBackBtn = document.querySelector('body > .back-btn');
+      if (mainPageBackBtn) {
+        mainPageBackBtn.style.removeProperty('display');
+        console.log('Main page back button shown');
+      }
+      console.log('Image viewer closed, body classes:', document.body.className);
     }
 
     function fadeIn() {

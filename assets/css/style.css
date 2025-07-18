@@ -264,6 +264,11 @@ h1 {
   padding: 2rem;
 }
 
+/* Hide back button when image viewer is open */
+body.image-viewer-open .lightbox .back-btn {
+  display: none !important;
+}
+
 #full-image {
   max-width: 100%;
   max-height: 100%;
