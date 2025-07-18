@@ -206,6 +206,8 @@ h1 {
   z-index: 1000;
 }
 
+
+
 .lightbox h2 {
   margin-bottom: 1rem;
 }
@@ -288,6 +290,22 @@ h1 {
   cursor: pointer;
   z-index: 1002;
 }
+
+.back-btn {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #00ffc8;
+  z-index: 1002;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}
+
+
 
 
 body.fade {

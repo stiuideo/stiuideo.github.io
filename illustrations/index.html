@@ -15,7 +15,7 @@
   </style>
 </head>
 <body class="fade content-page" style="opacity: 0; transition: none;">
-  <a href="/" style="position: absolute; top: 1rem; left: 1rem; font-size: 1.5rem; text-decoration: none; color: #00ffc8;">&larr;</a>
+  <a href="/" class="back-btn">&larr;</a>
   <h1>Illustrations</h1>
   <div class="masonry-container" id="illustration-grid">
     <div class="masonry-column"></div>
@@ -24,6 +24,7 @@
   </div>
 
   <div class="lightbox" id="lightbox">
+    <a href="#" class="back-btn" onclick="closeLightbox()">&larr;</a>
     <h2 id="lightbox-title"></h2>
     <div id="lightbox-description" class="lightbox-description"></div>
     <div id="lightbox-images"></div>
