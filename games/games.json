@@ -1,14 +1,32 @@
 [
+  {
+    "title": "The Wallet Dilemma",
+    "description": "You find a wallet. What could go wrong?\n\nA nearly-wordless visual novel featuring stick figures, questionable ethics, and the illusion of choice.",
+    "status": "coming-soon",
+    "image": "/assets/images/games/the_wallet_dilemma.png"
+  },
+  {
+    "title": "In The Name of the Ball",
+    "description": "The Bruzundanguense championship final is today. The whole country is watching.\n\nA text-based football RPG where every decision is filtered through monarchy, pressure, and rigged dice.\nWin or lose. They'll still blame you.",
+    "status": "some-day",
+    "image": "/assets/images/games/in_the_name_of_the_ball.jpg"
+  },
     {
-      "title": "Daily Chaos Budget Manager 2.0",
-      "description": "Welcome to your new favorite stress simulator. This is a simple but chaotic browser game where you dodge red and purple squares falling from the sky like your inbox on a Monday.",
+      "title": "Daily Chaos Budget Manager",
+      "description": "Dodge debt. Catch crumbs. Repeat.\n\nA frantic endless runner where your salary drops slower than your optimism.\n\nMake it through a year. Or don't. Most don't.",
       "status": "some-day",
       "image": "/assets/images/games/daily_chaos.png"
     },
     {
         "title": "The Talented Tom",
-        "description": "What if the police literature classic from Patricia Highsmith became a Text based game? Be on Tom's feet while the narrator guides you through existential dilemmas.",
+        "description": "Slip into Tom's shoes. They're a bit tight, but murder tends to stretch the leather.\n\nA text thriller based on Patricia Highsmith's classic, where every wrong move rewrites your fate. Quickly, and badly.\nType carefully.",
         "status": "some-day",
         "image": "/assets/images/games/the_talented_tom.png"
+    },
+    {
+        "title": "The Awesome Adventures of Petulance",
+        "description": "You are Petúnia. Your humans left for work. But you're sure they've been taken.\n\nNow you, warrior cat, must defeat every living toy in the house to save them.\n\nA bite-sized soulslike where every boss has a weakness, and your time is as limited as your attention span.",
+        "status": "some-day",
+        "image": "/assets/images/games/the_awesome_adventures_of_petulance.jpg"
     }
   ]
