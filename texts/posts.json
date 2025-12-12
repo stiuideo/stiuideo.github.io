@@ -5,9 +5,14 @@
       "file": "my-first-post.md"
     },
     {
-      "title": "Another Post",
-      "date": "2025-04-19",
+      "title": "30 Anos [PT-BR]",
+      "date": "2025-12-12",
       "file": "another-post.md"
+    },
+    {
+      "title": "Stretch",
+      "date": "2025-12-12",
+      "file": "Stretch.md"
     }
   ]
   
