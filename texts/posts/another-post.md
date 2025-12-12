@@ -1,8 +1,11 @@
 <!-- another-post.md -->
-# Another Post 
+# 30 ANOS
+Hoje, faço trinta anos. Sento na minha cadeira no escritório de casa e escrevo em português. Escrevo enquanto meus gatos, que orgulhosamente chamo de filhos, correm pela casa brincando. Minha namorada, que orgulhosamente chamo de esposa, está deitada descansando. E o simples fato de perceber isso me faz sorrir.
 
-This is just another post, so I can test the formatting.
-Blablabla whiskas sache.
+Escrevo no Writer, minha estilização em cima de um projeto open source para escritores chamado WriteMonkey. Ele é tão incrível, tão bem construído para não ter distrações. Ainda não entendo por que escolheram esse nome, ou por que usaram um relógio modernete como ícone. Mas já não importa, eles deram lugar à minha paleta de cores de baixo contraste e aos comandos que me permitem fazer chover no editor sem precisar colocar a mão no mouse. 
 
-## Topic
-I know a lot about this topic and I'm talking about it.
+Acho que nenhuma das leituras chiques sobre "Enxergar com novos olhos" é capaz de descrever a sensação de ter 3 décadas. "Sintonia" é um conceito que casa melhor. 
+
+Talvez, esta seja a palavra-chave quando penso nos meus 30 anos. Sintonia. Me sinto mais afinado para perceber o subjetivo, para alinhar meu caminho com onde, com o que e com quem quero. O Writer é uma das materializações disso. A adoção ao Zen browser e ao Wezterm, com atalhos que me permitem aposentar o tmux; a visita incessante ao site do Zed IDE para ver se já lançaram para Windows. Não gostar das escolhas de design do Xbox Game Pass, aturar o Windows e o LinkedIn. Não são apenas sentimentos primitivos. Também não são apenas pensamentos elaboradamente frios e racionais. São profundos o suficiente para caminhar por toda a régua.
+
+30 anos. Dizem que passamos os 20 procurando o que sabemos fazer e, os 30, se tornando muito bons nisso. Acho que prefiro refrasear. Passei sim meus 20 procurando o que sei fazer; mas também descobri o que gosto, quem sou, e agora quero ser de propósito. Também quero fazer de propósito, ajudando a construir um mundo mais plural, agradável e open source. Enfim, preciso lapidar mais a sentença, mas o conteúdo já está ali. 30 anos, de propósito.
