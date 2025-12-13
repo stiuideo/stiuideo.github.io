@@ -62,10 +62,13 @@
           postContent.innerHTML = marked.parse(md) + '<a href="#" class="back-link">&larr; See other texts</a>';
           postContent.style.display = 'block';
 
-          document.querySelector('.back-link').addEventListener('click', (e) => {
-            e.preventDefault();
-            loadList();
-          });
+          const backLink = postContent.querySelector('.back-link');
+          if (backLink) {
+            backLink.addEventListener('click', (e) => {
+              e.preventDefault();
+              loadList();
+            });
+          }
         })
         .catch(err => {
           postContent.innerHTML = '<p>Post failed to load. Maybe it never existed. Like your plans.</p>';
